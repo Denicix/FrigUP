@@ -6,6 +6,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/benvenuto"/>
+        android:id="@+id/welcome_tv"
+        android:text="@string/benvenuto"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="100dp"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aggiungi_prodotti"
+        android:text="@string/aggiungi_prodotti"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/visualizza_prodotti"
+        android:text="@string/visualizza_prodotti"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"/>
 
 </LinearLayout>
