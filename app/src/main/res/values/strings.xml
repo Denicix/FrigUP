@@ -3,4 +3,6 @@
     <string name="benvenuto">Benvenuto in FrigApp</string>
     <string name="aggiungi_prodotti">Aggiungi Prodotti</string>
     <string name="visualizza_prodotti">Visualizza Prodotti</string>
+    <string name="aggiungi_prodotti_manualmente">Aggiungi Manualmente</string>
+    <string name="aggiungi_prodottiBarCode">Aggiungi prodotti tramite BarCode</string>
 </resources>

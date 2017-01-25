@@ -19,16 +19,16 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/aggiungi_prodotti"
-        android:text="@string/aggiungi_prodotti"
+        android:id="@+id/aggiungi_prodottiBarCode"
+        android:text="@string/aggiungi_prodottiBarCode"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="100dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/visualizza_prodotti"
-        android:text="@string/visualizza_prodotti"
+        android:id="@+id/aggiungi_prodotti_manualmente"
+        android:text="@string/aggiungi_prodotti_manualmente"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="50dp"/>
 
