@@ -20,5 +20,6 @@ public class VisualizzaProdottiActivity extends Activity {
         username = intent.getStringExtra("username");
         nameTv.setText(username);
         */
+
     }
 }

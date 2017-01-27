@@ -22,7 +22,7 @@ import java.io.IOException;
  */
 
 
-public class ScanProdotto extends Activity {
+public class ScanProdottoActivity extends Activity {
 
     TextView barcodeInfo;
     SurfaceView cameraView;
@@ -52,7 +52,7 @@ public class ScanProdotto extends Activity {
             public void surfaceCreated(SurfaceHolder holder) {
 
                 try {
-                    if (ActivityCompat.checkSelfPermission(ScanProdotto.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(ScanProdottoActivity.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
                         //    ActivityCompat#requestPermissions
                         // here to request the missing permissions, and then overriding

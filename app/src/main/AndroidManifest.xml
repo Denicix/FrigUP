@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".AggiungiProdottoActivity" />
         <activity android:name=".VisualizzaProdottiActivity"></activity>
+        <activity android:name=".ScanProdottoActivity"></activity>
     </application>
 
 </manifest>
