@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.skyli.frigup.R;
+
 
 /**
  * Created by skyli on 25/01/2017.
@@ -15,7 +15,6 @@ import com.example.skyli.frigup.R;
 
 public class MainActivity extends Activity{
 
-    TextView welcomeTv;
     Button aggiungiProdotti;
     Button visualizzaProdotti;
     Activity activity = this;
@@ -29,9 +28,9 @@ public class MainActivity extends Activity{
         aggiungiProdotti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //username = changeTextEdit.getText().toString();
+
                 Intent intent = new Intent(activity, AggiungiProdottoActivity.class);
-                //intent.putExtra("username", username);
+
                 startActivity(intent);
 
             }
