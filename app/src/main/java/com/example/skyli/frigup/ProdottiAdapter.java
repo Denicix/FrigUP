@@ -22,7 +22,7 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
         View v = LayoutInflater.from(parent.getContext().inflate(R.layout.item_prodotti, parent, false));
         ProdottiViewHolder holder = new ProdottiViewHolder(v);
 
-        return new ProdottiViewHolder(v);
+        return holder;
     }
 
     @Override
@@ -31,16 +31,15 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
         holder.prodottiQuantitaTV.setText(currentProdotto.getQuantita());//INSERISCI IN XML
         holder.prodottiNomeTv.setText(currentProdotto.getNome());//INSERISCI IN XML
         holder.prodottiScadenzaTv.setText(currentProdotto.getScadenza());//INSERISCI IN XML
-
-
     }
 
-    public void setData(ArrayList<Prodotti> prodotti) {
+    public void setDataSet(ArrayList<Prodotti> prodotti) {
         dataSet = prodotti;
         notifyDataSetChanged();
     }
     @Override
     public int getItemCount() {
+
         return dataSet.size();
     }
 
@@ -51,9 +50,9 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
 
         public ProdottiViewHolder(View v) {
             super(v);
-            prodottiNomeTv = (TextView)v.findViewById(R.id.prodotti_name);
-            prodottiScadenzaTv = (TextView)v.findViewById(R.id.prodotti_scadenza);
-            prodottiQuantitaTV = (TextView)v.findViewById(R.id.prodotti_quantita);
+            prodottiNomeTv = (TextView) v.findViewById(R.id.prodotti_name);
+            prodottiScadenzaTv = (TextView) v.findViewById(R.id.prodotti_scadenza);
+            prodottiQuantitaTV = (TextView) v.findViewById(R.id.prodotti_quantita);
 
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
