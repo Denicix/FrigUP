@@ -5,4 +5,7 @@
     <string name="visualizza_prodotti">Visualizza Prodotti</string>
     <string name="aggiungi_prodotti_manualmente">Aggiungi Manualmente</string>
     <string name="aggiungi_prodottiBarCode">Aggiungi prodotti tramite BarCode</string>
+    <string name="Listaprodotti">Lista prodotti inseriti</string>
+    <string name="ProdottiInScadenza">Scadenza prodotti inseriti</string>
+    <string name="ProdottiQuantita">Quantita prodotti inseriti</string>
 </resources>

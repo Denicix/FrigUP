@@ -17,9 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".ui.activities.AggiungiProdottoActivity" />
         <activity android:name=".ui.activities.VisualizzaProdottiActivity"></activity>
         <activity android:name=".ui.activities.ScanProdottoActivity"></activity>
+
     </application>
 
 </manifest>

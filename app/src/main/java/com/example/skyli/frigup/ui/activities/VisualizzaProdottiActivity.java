@@ -35,7 +35,7 @@ public class VisualizzaProdottiActivity extends Activity {
         adapter = new ProdottiAdapter();
 
         productRecyclerView.setLayoutManager(layoutManager);
-        productRecyclerView.setLayoutManager(adapter);
+        productRecyclerView.setAdapter(adapter);
 
     }
 }

@@ -9,6 +9,9 @@ public class Prodotti {
     private String scadenza;
     private String quantita;
 
+    public Prodotti() {
+    }
+
     public String getQuantita() {
         return quantita;
     }
