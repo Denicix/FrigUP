@@ -22,6 +22,12 @@ public class VisualizzaProdottiActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizza_prodotti);
         nameTv = (TextView)findViewById(R.id.name_tv);
+
+      /* intent = getIntent();
+        username = intent.getStringExtra("username");
+        nameTv.setText(username);
+        */
+
         intent = getIntent();
 
         layoutManager = new LinearLayoutManager(this);
