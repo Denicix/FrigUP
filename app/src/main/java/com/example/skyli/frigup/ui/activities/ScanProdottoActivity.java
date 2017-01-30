@@ -11,8 +11,6 @@ import com.example.skyli.frigup.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 
-import java.util.List;
-import java.util.logging.Handler;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -27,17 +25,22 @@ public class ScanProdottoActivity extends Activity implements ZXingScannerView.R
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mScannerView = new ZXingScannerView(this);
-        setContentView(R.layout.activity_scan_prodotto);
+        setContentView(mScannerView);
 
-        mScannerView = new ZXingScannerView(this);
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mScannerView.setResultHandler(this);
+        mScannerView.startCamera();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mScannerView.setResultHandler(this);
-        mScannerView.startCamera();
+
+
     }
 
     @Override
