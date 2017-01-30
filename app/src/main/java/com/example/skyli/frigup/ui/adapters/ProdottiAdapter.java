@@ -22,10 +22,10 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
 
     @Override
     public ProdottiAdapter.ProdottiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext().inflate(R.layout.item_prodotti, parent, false));
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_prodotti, parent, false);
         ProdottiViewHolder holder = new ProdottiViewHolder(v);
 
-        return new ProdottiViewHolder(v);
+        return holder;
     }
 
     @Override
