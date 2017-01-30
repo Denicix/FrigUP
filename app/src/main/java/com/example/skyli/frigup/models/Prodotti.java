@@ -1,4 +1,4 @@
-package com.example.skyli.frigup;
+package com.example.skyli.frigup.models;
 
 /**
  * Created by Danilo Crispi on 27/01/2017.

@@ -1,4 +1,4 @@
-package com.example.skyli.frigup;
+package com.example.skyli.frigup.ui.activities;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
@@ -10,6 +10,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
 
+import com.example.skyli.frigup.R;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
@@ -60,9 +61,9 @@ public class ScanProdottoActivity extends Activity {
                         //                                          int[] grantResults)
                         // to handle the case where the user grants the permission. See the documentation
                         // for ActivityCompat#requestPermissions for more details.
-                        return;
+                        cameraSource.start(cameraView.getHolder());
                     }
-                    cameraSource.start(cameraView.getHolder());
+
                 } catch (IOException ie) {
                     Log.e("CAMERA SOURCE", ie.getMessage());
                 }
