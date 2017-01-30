@@ -1,4 +1,4 @@
-package com.example.skyli.frigup;
+package com.example.skyli.frigup.ui.activities;
 
 
 import android.app.Activity;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.skyli.frigup.R;
 
 public class AggiungiProdottoActivity extends Activity {
 

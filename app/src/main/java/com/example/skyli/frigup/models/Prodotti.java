@@ -1,4 +1,4 @@
-package com.example.skyli.frigup;
+package com.example.skyli.frigup.models;
 
 /**
  * Created by Danilo Crispi on 27/01/2017.
@@ -8,6 +8,9 @@ public class Prodotti {
     private String nome;
     private String scadenza;
     private String quantita;
+
+    public Prodotti() {
+    }
 
     public String getQuantita() {
         return quantita;
