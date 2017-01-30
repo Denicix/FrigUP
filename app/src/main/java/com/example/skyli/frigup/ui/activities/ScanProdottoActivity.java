@@ -1,106 +1,62 @@
 package com.example.skyli.frigup.ui.activities;
 
+
 import android.app.Activity;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
-import android.util.SparseArray;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.widget.TextView;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.skyli.frigup.R;
-import com.google.android.gms.vision.Detector;
-import com.google.android.gms.vision.barcode.Barcode;
-import com.google.android.gms.vision.barcode.BarcodeDetector;
-import com.google.android.gms.vision.CameraSource;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.Result;
 
-import java.io.IOException;
+import java.util.List;
+import java.util.logging.Handler;
 
-/**
- * Created by skyli on 26/01/2017.
- */
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
+
+import static android.content.ContentValues.TAG;
+
+public class ScanProdottoActivity extends Activity implements ZXingScannerView.ResultHandler{
+
+    private ZXingScannerView mScannerView;
 
 
-public class ScanProdottoActivity extends Activity {
-
-    TextView barcodeInfo;
-    SurfaceView cameraView;
-    CameraSource cameraSource;
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mScannerView = new ZXingScannerView(this);
         setContentView(R.layout.activity_scan_prodotto);
 
+        mScannerView = new ZXingScannerView(this);
 
-        cameraView = (SurfaceView) findViewById(R.id.camera_view);
-        barcodeInfo = (TextView) findViewById(R.id.txtContent);
-
-
-        BarcodeDetector barcodeDetector =
-                new BarcodeDetector.Builder(this)
-                        .setBarcodeFormats(Barcode.CODE_128)//QR_CODE)
-                        .build();
-
-        cameraSource = new CameraSource
-                .Builder(this, barcodeDetector)
-                .setRequestedPreviewSize(640, 480)
-                .build();
-
-        cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
-            @Override
-            public void surfaceCreated(SurfaceHolder holder) {
-
-                try {
-                    if (ActivityCompat.checkSelfPermission(ScanProdottoActivity.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        cameraSource.start(cameraView.getHolder());
-                    }
-
-                } catch (IOException ie) {
-                    Log.e("CAMERA SOURCE", ie.getMessage());
-                }
-            }
-
-            @Override
-            public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-            }
-
-            @Override
-            public void surfaceDestroyed(SurfaceHolder holder) {
-                cameraSource.stop();
-            }
-        });
-
-
-        barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
-            @Override
-            public void release() {
-            }
-
-            @Override
-            public void receiveDetections(Detector.Detections<Barcode> detections) {
-
-                final SparseArray<Barcode> barcodes = detections.getDetectedItems();
-
-                if (barcodes.size() != 0) {
-                    barcodeInfo.post(new Runnable() {    // Use the post method of the TextView
-                        public void run() {
-                            barcodeInfo.setText(    // Update the TextView
-                                    barcodes.valueAt(0).displayValue
-                            );
-                        }
-                    });
-                }
-            }
-        });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mScannerView.setResultHandler(this);
+        mScannerView.startCamera();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mScannerView.stopCamera();
+    }
+
+    @Override
+    public void handleResult(Result result) {
+        Toast.makeText(this, "Contents = " + result.getText() +
+
+                ", Format = " + result.getBarcodeFormat().toString(), Toast.LENGTH_SHORT).show();
+        //Do something with result here
+
+        Log.v(TAG, result.getText());
+        Log.v(TAG, result.getBarcodeFormat().toString());
+
+        //If you would like to resume scanning, call this method below:
+        mScannerView.resumeCameraPreview(this);
+    }
 }
