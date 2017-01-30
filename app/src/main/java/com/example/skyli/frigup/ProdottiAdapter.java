@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -53,6 +54,13 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
             prodottiNomeTv = (TextView)v.findViewById(R.id.prodotti_name);
             prodottiScadenzaTv = (TextView)v.findViewById(R.id.prodotti_scadenza);
             prodottiQuantitaTV = (TextView)v.findViewById(R.id.prodotti_quantita);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(v.getContext(),"Nome prodotto { " + dataSet.get(getAdapterPosition()).getNome(), Toast.LENGTH_LONG).show();
+                }
+            };
         }
     }
 }
