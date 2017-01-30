@@ -60,7 +60,7 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
                 public void onClick(View v) {
                     Toast.makeText(v.getContext(),"Nome prodotto { " + dataSet.get(getAdapterPosition()).getNome(), Toast.LENGTH_LONG).show();
                 }
-            };
+            });
         }
     }
 }
