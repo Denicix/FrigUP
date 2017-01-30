@@ -33,7 +33,7 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
         Prodotti currentProdotto = dataSet.get(position);
         holder.prodottiQuantitaTV.setText(currentProdotto.getQuantita());//INSERISCI IN XML
         holder.prodottiNomeTv.setText(currentProdotto.getNome());//INSERISCI IN XML
-        holder.prodottiScadenzaTv.setText(currentProdotto.getScadenza());//INSERISCI IN XML
+        holder.prodottiScadenzaTv.setText(""+currentProdotto.getScadenza());//INSERISCI IN XML
     }
 
     public void setDataSet(ArrayList<Prodotti> prodotti) {

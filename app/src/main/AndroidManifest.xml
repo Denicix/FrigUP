@@ -19,7 +19,7 @@
         </activity>
 
         <activity android:name=".ui.activities.AggiungiProdottoActivity" />
-        <activity android:name=".ui.activities.VisualizzaProdottiActivity"></activity>
+        <activity android:name=".ui.activities.VisualizzaProdottiActivity"/>
         <activity android:name=".ui.activities.ScanProdottoActivity"></activity>
 
     </application>
