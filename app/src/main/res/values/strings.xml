@@ -8,6 +8,8 @@
     <string name="Listaprodotti">Lista prodotto inseriti</string>
     <string name="ProdottiInScadenza">Scadenza prodotto</string>
     <string name="ProdottiQuantita">Quantita</string>
+    <string name="Infinite_Stroke_Bolder">Infinite_Stroke_Bolder.ttf</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

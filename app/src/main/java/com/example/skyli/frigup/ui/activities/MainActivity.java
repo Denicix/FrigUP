@@ -19,6 +19,7 @@ public class MainActivity extends Activity{
     Button visualizzaProdotti;
     Activity activity = this;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,5 +47,6 @@ public class MainActivity extends Activity{
 
             }
         });
+
     }
 }
