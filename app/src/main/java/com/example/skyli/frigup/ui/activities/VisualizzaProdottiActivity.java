@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
 import com.example.skyli.frigup.R;
-import com.example.skyli.frigup.models.Prodotti;
+import com.example.skyli.frigup.models.Prodotto;
 import com.example.skyli.frigup.ui.adapters.ProdottiAdapter;
 
 import java.util.ArrayList;
@@ -45,25 +45,25 @@ public class VisualizzaProdottiActivity extends Activity {
 
 
     private void fetchProdotti(){
-        ArrayList<Prodotti> ListaProdotti = new ArrayList<>();
-        Prodotti s1 = new Prodotti();
+        ArrayList<Prodotto> listaProdotto = new ArrayList<>();
+        Prodotto s1 = new Prodotto();
         s1.setNome("Uova");
         s1.setScadenza("21/05/1990");
         s1.setQuantita("5");
-        Prodotti s2 = new Prodotti();
+        Prodotto s2 = new Prodotto();
         s2.setNome("Pane");
         s2.setScadenza("15/02/2020");
         s2.setQuantita("1kg");
-        Prodotti s3 = new Prodotti();
+        Prodotto s3 = new Prodotto();
         s3.setNome("Sugo");
         s3.setScadenza("27/01/2090");
         s3.setQuantita("5kg");
 
-        ListaProdotti.add(s1);
-        ListaProdotti.add(s2);
-        ListaProdotti.add(s3);
+        listaProdotto.add(s1);
+        listaProdotto.add(s2);
+        listaProdotto.add(s3);
 
-        adapter.setDataSet(ListaProdotti);
+        adapter.setDataSet(listaProdotto);
 
     }
 }

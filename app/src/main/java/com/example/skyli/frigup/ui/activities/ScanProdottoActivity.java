@@ -2,6 +2,7 @@ package com.example.skyli.frigup.ui.activities;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -61,5 +62,11 @@ public class ScanProdottoActivity extends Activity implements ZXingScannerView.R
 
         //If you would like to resume scanning, call this method below:
         mScannerView.resumeCameraPreview(this);
+        Intent intent = new Intent();
+        intent.putExtra("barcode", result.getText());
+        setResult(Activity.RESULT_OK, intent);
+        finish();
     }
+
+
 }

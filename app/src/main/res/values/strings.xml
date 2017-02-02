@@ -4,9 +4,12 @@
     <string name="aggiungi_prodotti">Aggiungi Prodotti</string>
     <string name="visualizza_prodotti">Visualizza Prodotti</string>
     <string name="aggiungi_prodotti_manualmente">Aggiungi Manualmente</string>
-    <string name="aggiungi_prodottiBarCode">Aggiungi prodotti tramite BarCode</string>
-    <string name="Listaprodotti">Lista prodotti inseriti</string>
-    <string name="ProdottiInScadenza">Scadenza prodotti</string>
+    <string name="aggiungi_prodottiBarCode">Aggiungi prodotto tramite BarCode</string>
+    <string name="Listaprodotti">Lista prodotto inseriti</string>
+    <string name="ProdottiInScadenza">Scadenza prodotto</string>
     <string name="ProdottiQuantita">Quantita</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

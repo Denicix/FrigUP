@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.skyli.frigup.R;
-import com.example.skyli.frigup.models.Prodotti;
+import com.example.skyli.frigup.models.Prodotto;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.ProdottiViewHolder> {
 
-    ArrayList<Prodotti> dataSet = new ArrayList<>();
+    ArrayList<Prodotto> dataSet = new ArrayList<>();
 
     @Override
     public ProdottiAdapter.ProdottiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -30,14 +30,14 @@ public class ProdottiAdapter extends RecyclerView.Adapter<ProdottiAdapter.Prodot
 
     @Override
     public void onBindViewHolder(ProdottiAdapter.ProdottiViewHolder holder, int position) {
-        Prodotti currentProdotto = dataSet.get(position);
+        Prodotto currentProdotto = dataSet.get(position);
         holder.prodottiQuantitaTV.setText(currentProdotto.getQuantita());//INSERISCI IN XML
         holder.prodottiNomeTv.setText(currentProdotto.getNome());//INSERISCI IN XML
         holder.prodottiScadenzaTv.setText(currentProdotto.getScadenza());//INSERISCI IN XML
     }
 
-    public void setDataSet(ArrayList<Prodotti> prodotti) {
-        dataSet = prodotti;
+    public void setDataSet(ArrayList<Prodotto> prodotto) {
+        dataSet = prodotto;
         notifyDataSetChanged();
     }
     @Override
