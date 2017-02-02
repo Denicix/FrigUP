@@ -8,5 +8,7 @@
     <string name="Listaprodotti">Lista prodotti inseriti</string>
     <string name="ProdottiInScadenza">Scadenza prodotti</string>
     <string name="ProdottiQuantita">Quantita</string>
+    <string name="Infinite_Stroke_Bolder">Infinite_Stroke_Bolder.ttf</string>
+
 
 </resources>
