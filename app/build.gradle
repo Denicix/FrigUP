@@ -34,4 +34,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.android.support:support-v4:25.1.0'
     testCompile 'junit:junit:4.12'
+    classpath 'com.google.gms:google-services:3.0.0'
+    apply plugin: 'com.google.gms.google-services'
 }
