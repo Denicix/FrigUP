@@ -13,21 +13,26 @@ import java.util.Map;
  */
 public class Prodotto {
 
-    private String nome, scadenza, quantita, imageURL;
+    private String nome_prodotto, scadenza, quantita, imageURL;
 
     public Prodotto() {
     }
 
     public Prodotto(JSONObject productJSON){
         try {
-            nome = productJSON.getString("product_name_en");
+            nome_prodotto = productJSON.getString("product_name_en");
             imageURL = productJSON.getString("image_url");
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 
-    public Prodotto(String nome)
+    public Prodotto(String nome_prodotto, String scadenza, String quantita){
+        this.nome_prodotto = nome_prodotto;
+        this.scadenza = scadenza;
+        this.quantita = quantita;
+
+    }
 
     public String getQuantita() {
         return quantita;
@@ -38,7 +43,7 @@ public class Prodotto {
     }
 
     public String getNome() {
-        return nome;
+        return nome_prodotto;
     }
 
 
@@ -58,7 +63,7 @@ public class Prodotto {
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
-        result.put("nome prodotto", nome);
+        result.put("nome prodotto", nome_prodotto);
         return result;
     }
 

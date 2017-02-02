@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1058620492879",
+    "firebase_url": "https://frigapp.firebaseio.com",
+    "project_id": "frigapp",
+    "storage_bucket": "frigapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058620492879:android:cd42d27aabad0f95",
+        "android_client_info": {
+          "package_name": "com.example.skyli.frigup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058620492879-t1a0fve8uqr1a5mq72uif8783u1bs92n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgO1RckzJ5Yjah0s6jD47_pro-3GCqLe0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
